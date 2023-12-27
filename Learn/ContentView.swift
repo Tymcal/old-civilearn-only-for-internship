@@ -8,19 +8,15 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @State private var isLoggedIn = false
+    @State private var token: String = ""
+    
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+        if isLoggedIn {
+            HomeView(isLoggedIn: $isLoggedIn, token: $token)
+        } else {
+            AuthView(isLoggedIn: $isLoggedIn, token: $token)
         }
-        .padding()
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }
