@@ -40,6 +40,8 @@ struct DecisionView_test: View {
     
     private var fileName: String = "IMG_4966"
     
+    @State private var showingNode: Bool = false
+    
     var body: some View {
         let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: fileName, ofType: "MOV")!))
         
@@ -52,18 +54,19 @@ struct DecisionView_test: View {
                 .frame(width: width, height: width*9/16)
             VStack {
                 Spacer()
-                DecisionView(branchs: content.nodes[0].branchs)
-                    .frame(width: width*0.965, height: 60)
-                    //.blur(radius: 20, opaque: true)
-                    .background(.thickMaterial)
-                    .cornerRadius(10)
+//                DecisionView(branchs: content.nodes[0].branchs[0], showingNode: $showingNode)
+//                    .frame(width: width*0.965, height: 60)
+//                    //.blur(radius: 20, opaque: true)
+//                    .background(.thickMaterial)
+//                    .cornerRadius(10)
             }
         }
     }
 }
 
 struct DecisionView: View {
-    var branchs: [Branch]
+    @Binding var branchs: [Branch]
+    @Binding var showingNode: Bool
     var body: some View {
         HStack {
             Spacer()
@@ -71,6 +74,7 @@ struct DecisionView: View {
                 HStack {
                     ForEach(branchs) { branch in
                         Button(branch.name) {
+                            withAnimation { showingNode = false }
                         }
                         .buttonStyle(BranchButton())
                     }
@@ -80,6 +84,7 @@ struct DecisionView: View {
                     HStack {
                         ForEach(branchs) { branch in
                             Button(branch.name) {
+                                withAnimation { showingNode = false }
                             }
                             .buttonStyle(BranchButton())
                         }
@@ -88,8 +93,8 @@ struct DecisionView: View {
                 .padding(1)
             }
             Spacer()
-            Button("Submit") {}
-                .buttonStyle(SendButton())
+//            Button("Submit") {}
+//                .buttonStyle(SendButton())
         }
         
     }

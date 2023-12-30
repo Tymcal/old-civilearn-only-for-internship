@@ -7,49 +7,49 @@
           {
             "id": "7c748c6f-4482-4f07-95f6-1024b9f3d8ba",
             "name": "What is the capital of France?",
-            "timestamp": "0:05",
+            "timestamp": 3.00,
             "branchs": [
                 {
                     "id": "8ea733b3-fc44-4d54-8b1d-624f5c5ba08c",
                     "name": "A",
-                    "jumpTo": "1:02"
+                    "jumpTo": 1.02
                 },
                 {
                     "id": "fc3cbf0a-062a-4979-9167-6eb22a05ebb4",
                     "name": "B",
-                    "jumpTo": "1:22"
+                    "jumpTo": 1.22
                 },
                 {
                     "id": "b1832bee-5be4-4153-8074-2a3de90bd1d8",
                     "name": "C",
-                    "jumpTo": "5:26"
+                    "jumpTo": 5.26
                 },
                 {
                     "id": "b115fa45-ffd2-45f5-bad2-363eadef386f",
                     "name": "D",
-                    "jumpTo": "10:34"
+                    "jumpTo": 10.34
                 }
             ]
           },
           {
             "id": "7c748c6f-4482-4f07-95f6-1024b9f3d8bb",
             "name": "Have you ever questioned your own reality?",
-            "timestamp": "0:09",
+            "timestamp": 4.00,
             "branchs": [
                 {
                     "id": "3d0a7fe6-2a35-41a7-9bbd-03614c7f3a66",
                     "name": "AAAAAA",
-                    "jumpTo": ""
+                    "jumpTo": 0.00
                 },
                 {
                     "id": "86b9d0c9-21e1-41d7-9cda-0b7b5e65b8a9",
                     "name": "BBBBBB",
-                    "jumpTo": ""
+                    "jumpTo": 0.00
                 },
                 {
                     "id": "b56cd6ff-7a46-4b54-883d-ef2202fdd919",
                     "name": "CCCCCC",
-                    "jumpTo": "5:26"
+                    "jumpTo": 5.26
                 }
             ]
           }
@@ -63,49 +63,49 @@
           {
             "id": "7c748c6f-4482-4f07-95f6-1024b9f3d8bc",
             "name": "A or B?",
-            "timestamp": "0:11",
+            "timestamp": 5.00,
             "branchs": [
                 {
                     "id": "8564eba8-80dd-4b63-a9e6-d1ce8ef8493f",
                     "name": "W",
-                    "jumpTo": "1:02"
+                    "jumpTo": 1.02
                 },
                 {
                     "id": "c1927011-198a-40bd-94e7-fd77b4b5ae16",
                     "name": "X",
-                    "jumpTo": "1:22"
+                    "jumpTo": 1.22
                 },
                 {
                     "id": "60452ca2-bc07-42b0-bd93-6ca152131488",
                     "name": "Y",
-                    "jumpTo": "5:26"
+                    "jumpTo": 5.26
                 },
                 {
                     "id": "34a19350-b722-4aad-9c63-f78ff54ccfe5",
                     "name": "Z",
-                    "jumpTo": "10:34"
+                    "jumpTo": 3.00
                 }
             ]
           },
           {
             "id": "7c748c6f-4482-4f07-95f6-1024b9f3d8bd",
             "name": "WTF??????",
-            "timestamp": "0:18",
+            "timestamp": 6.00,
             "branchs": [
                 {
                     "id": "3b49b773-5204-4f03-b079-0d8a81f520f0",
                     "name": "Apple",
-                    "jumpTo": ""
+                    "jumpTo": 3.00
                 },
                 {
                     "id": "f48e2d28-3c4b-469e-a985-51bbbb990be3",
                     "name": "Banana",
-                    "jumpTo": ""
+                    "jumpTo": 3.00
                 },
                 {
                     "id": "cf90550d-efc3-483b-b0d2-3ce4b7a85e17",
                     "name": "Cat",
-                    "jumpTo": "5:26"
+                    "jumpTo": 3.00
                 }
             ]
           }

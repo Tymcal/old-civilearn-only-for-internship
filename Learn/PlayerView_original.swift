@@ -20,6 +20,7 @@ struct PlayerView_original: View {
         ZStack {
             VideoPlayer(player: player)
                 .onAppear {
+                    player.play()
                     //video time observer
                     player.addPeriodicTimeObserver(forInterval: CMTime(seconds: 1, preferredTimescale: 1), queue: .main) { time in
                         self.currentTime = round(CMTimeGetSeconds(time) * 100)/100.0
@@ -30,7 +31,7 @@ struct PlayerView_original: View {
                         
                     }
                 }
-                .allowsHitTesting(false)
+                .allowsHitTesting(true)
         }
             .sheet(isPresented: $showingSheet) {
                 DecisionDetail(content: modelData.drafts[0], decision: modelData.drafts[0].nodes[0])

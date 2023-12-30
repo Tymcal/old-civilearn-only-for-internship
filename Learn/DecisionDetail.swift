@@ -101,7 +101,7 @@ struct OptionView: View {
                 //JUMP
                 Button {
                 } label: {
-                    Text(option.jumpTo)
+                    Text(String(option.jumpTo))
                         .padding(6)
                         .frame(width: 65)
                 }
