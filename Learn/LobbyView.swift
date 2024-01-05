@@ -8,27 +8,27 @@ struct testfield: View {
                     id: "1",
                     title: "Mechanics",
                     asset: "4871.MOV",
-                    decisions: [Decision(answer: "C", duration: 3.25),Decision(answer: "A", duration: 13.21)],
+                    decisions: [],
                     creator: Creator(firstname: "Prabpon", lastname: "Phraiphimuk")),
                     
                 Event(
                     id: "2",
                     title: "Wave",
                     asset: "4872.MOV",
-                    decisions: [Decision(answer: "A", duration: 9.17),Decision(answer: "A", duration: 2.03)],
+                    decisions: [],
                     creator: Creator(firstname: "Pornnapat", lastname: "Chattananan")),
                 
                 Event(
                     id: "3",
                     title: "Electricity",
                     asset: "4873.MOV",
-                    decisions: [Decision(answer: "D", duration: 0.95),Decision(answer: "C", duration: 2.79)],
+                    decisions: [],
                     creator: Creator(firstname: "Pasawat", lastname: "Khumpeera")),
                 
                 Event(
                     title: "Thermodynamics",
                     asset: "4874.MOV",
-                    decisions: [Decision(answer: "C", duration: 4.29),Decision(answer: "B", duration: 1.21)],
+                    decisions: [],
                     creator: Creator(firstname: "Tim", lastname: "Cook"))
             ]
     
@@ -98,6 +98,7 @@ struct GridView_test: View {
 struct LobbyView: View {
     @State var event: Event
     @State var prevPage: PrevPage
+    //@Binding var token: String
     var body: some View {
         VStack {
             Text(event.title)
@@ -106,7 +107,7 @@ struct LobbyView: View {
                 .padding(25)
             HStack {
                 if prevPage == .homeView {
-                    NavigationLink(destination: VideoView()) {
+                    NavigationLink(destination: PlayerView(content: <#Content#>)) {
                         Button("Play") {}
                         .buttonStyle(ShortBigButton(background: .blue))
                     }
@@ -115,10 +116,12 @@ struct LobbyView: View {
                         
                     }
                     .buttonStyle(ShortBigButton(background: .blue))
+                    
                     Button("Help!") {
                         
                     }
                     .buttonStyle(ShortBigButton(background: .primary, foreground: .blue))
+                    
                     Button("Leave") {
                         
                     }
@@ -144,5 +147,8 @@ struct ShortBigButton: ButtonStyle {
 }
 
 #Preview {
-    testfield()
+    //testfield()
+    LobbyView(
+        event: Event(title: "Test", asset: "https", decisions: [], creator: Creator(firstname: "Teema", lastname: "Khawjit")), prevPage: .homeView
+    )
 }
