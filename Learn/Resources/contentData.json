@@ -2,7 +2,6 @@
     {
       "id": "7c748c6f-4482-4f07-95f6-1024b9f3d8be",
       "title": "Mechanics",
-      "asset": "IMG_5065",
       "nodes": [
           {
             "id": "7c748c6f-4482-4f07-95f6-1024b9f3d8ba",
@@ -58,7 +57,6 @@
     {
       "id": "6c748c6f-4482-4f07-95f6-1024b9f3d8be",
       "title": "Electricity",
-      "asset": "IMG_5066",
       "nodes": [
           {
             "id": "7c748c6f-4482-4f07-95f6-1024b9f3d8bc",
@@ -114,19 +112,16 @@
     {
       "id": "3db73a22-6f55-4f33-a7c5-67ff74dbd9d1",
       "title": "Wave",
-      "asset": "IMG_5067",
       "nodes": []
     },
     {
       "id": "4db73a22-6f55-4f33-a7c5-67ff74dbd9d1",
       "title": "Fluid",
-      "asset": "IMG_5068",
       "nodes": []
     },
     {
       "id": "5db73a22-6f55-4f33-a7c5-67ff74dbd9d1",
       "title": "Quantum",
-      "asset": "IMG_5069",
       "nodes": []
     }
 ]

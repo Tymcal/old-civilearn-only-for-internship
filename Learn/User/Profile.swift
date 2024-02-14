@@ -9,16 +9,18 @@ import SwiftUI
 
 struct ProfileButton: View {
     
+    @Binding var showSignUp: Bool
     @Binding var isLoggedIn: Bool
     @Binding var token: String
     
     var body: some View {
         NavigationLink {
-            ProfileView(isLoggedIn: $isLoggedIn, token: $token)
+            ProfileView(showSignUp: $showSignUp, isLoggedIn: $isLoggedIn, token: $token)
                 .toolbar {
                     Button("logout") {
                         token = ""
                         isLoggedIn = false
+                        showSignUp = false
                     }
                 }
         } label: {
@@ -29,6 +31,7 @@ struct ProfileButton: View {
 
 struct ProfileView: View {
     
+    @Binding var showSignUp: Bool
     @Binding var isLoggedIn: Bool
     @Binding var token: String
     
@@ -36,7 +39,3 @@ struct ProfileView: View {
         Text("Profile")
     }
 }
-
-//#Preview {
-//    ProfileView(isLoggedIn: <#Binding<Bool>#>, token: <#Binding<String>#>)
-//}

@@ -12,19 +12,21 @@ struct Content: Codable, Identifiable {
     var title: String
     var asset: String
     var nodes: [Node] = []
+    var creator: Creator
     
     enum CodingKeys: String, CodingKey {
         case id
         case title
         case asset
         case nodes
+        case creator
     }
 }
 
 struct Node: Codable, Identifiable {
     var id: String? = UUID().uuidString
     var name: String
-    var timestamp: Double
+    var timestamp: Int
     var branchs: [Branch]
     
     enum CodingKeys: String, CodingKey {
@@ -38,11 +40,21 @@ struct Node: Codable, Identifiable {
 struct Branch: Codable, Identifiable {
     var id: String? = UUID().uuidString
     var name: String = "Unnamed"
-    var jumpTo: Double = 0.00
+    var jumpTo: Int = 0
     
     enum CodingKeys: String, CodingKey {
         case id
         case name
         case jumpTo
     }
+}
+
+struct Creator: Hashable, Codable, Identifiable {
+    var id: String? = UUID().uuidString
+    var firstname: String
+    var lastname: String
+    var email: String = ""
+    var line: String = ""
+    var messenger: String = ""
+    var tel: String = ""
 }

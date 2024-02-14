@@ -11,12 +11,13 @@ struct ContentView: View {
     
     @State private var isLoggedIn = false
     @State private var token: String = ""
+    @State private var showSignUp: Bool = true
     
     var body: some View {
         if isLoggedIn {
-            HomeView(isLoggedIn: $isLoggedIn, token: $token)
+            HomeView(showSignUp: $showSignUp, isLoggedIn: $isLoggedIn, token: $token)
         } else {
-            AuthView(isLoggedIn: $isLoggedIn, token: $token)
+            AuthView(showSignUp: $showSignUp, isLoggedIn: $isLoggedIn, token: $token)
         }
     }
 }
