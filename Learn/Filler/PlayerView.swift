@@ -7,7 +7,7 @@
 import SwiftUI
 import AVKit
 
-//var isFromPlayerView: Bool = false
+var isFromPlayerView: Bool = false
 
 struct PlayerView: View {
     
@@ -36,14 +36,13 @@ struct PlayerView: View {
     @Binding var token: String
     
     var body: some View {
-        let player = AVPlayer(url: URL(string: content.asset)!)
+//        let player = AVPlayer(url: URL(string: content.asset)!)
+        let url = URL(fileURLWithPath: Bundle.main.path(forResource: "usecase", ofType: "mp4")!)
         
-//        let player = AVPlayer(url: URL(fileURLWithPath: Bundle.main.path(forResource: "test", ofType: "mp4")!))
-        
-        let asset = AVAsset(url: URL(string: content.asset)!)
+        let player = AVPlayer(url: url)
+        let asset = AVAsset(url: url)
         
         VStack {
-
             
             // -----------------------------
             // To Lobby
@@ -53,7 +52,8 @@ struct PlayerView: View {
                     Task {
                         player.pause()
                         event.isPlaying = false
-                        event.contPlaying = Int(player.currentTime().value)
+                        event.contPlaying = Int(player.currentTime().value) / 10000000
+                        print(event.contPlaying)
                         isFromPlayerView = true
                         dismiss()
                     }
@@ -69,20 +69,22 @@ struct PlayerView: View {
             VideoPlayer(player: player)
                 .onAppear {
                     Task {
-                        duration = Int(try await asset.load(.duration).value)
+                        duration = Int(CMTimeGetSeconds(try await  asset.load(.duration)) * 100)
+                        print(duration)
                         event.isPlaying = true
-                        await player.seek(to: CMTime(value: CMTimeValue(event.contPlaying), timescale: 1000))
+                        print(event.contPlaying)
+                        print(CMTime(value: CMTimeValue(event.contPlaying * 10000000), timescale: 1000000000))
+                        await player.seek(to: CMTime(value: CMTimeValue(event.contPlaying * 10000000), timescale: 1000000000))
                         player.play()
                         //video time observer
-                        player.addPeriodicTimeObserver(forInterval: CMTime(value: 1, timescale: 1000), queue: .main) { time in
+                        player.addPeriodicTimeObserver(forInterval: CMTime(value: 5, timescale: 1000), queue: .main) { time in
                             
-                            print(time.value)
-                            self.currentTime = Int(time.value)
+                            self.currentTime = Int(time.value) / 10000000
                             
                             // Once video ends
                             if currentTime == duration {
                                 event.isPlaying = false
-                                event.contPlaying = /*duration.rounded()*/ 0
+                                event.contPlaying = 0
                                 isFromPlayerView = true
                                 dismiss()
                             }
@@ -161,7 +163,6 @@ extension PlayerView {
         //avoid double popup checker
         if currentTime != previousTime && currentTime == timestamp {
             player.pause()
-            print(Int(player.currentTime().value))
             branchsStored = branchs
             withAnimation { showingNode = true }
             decisionTemp.startTime = dateTimeStamp()
@@ -181,7 +182,7 @@ extension PlayerView {
     func leavePlayer(player: AVPlayer) async throws {
         player.pause()
         event.isPlaying = false
-        event.contPlaying = Int(player.currentTime().value)
+        event.contPlaying = Int(player.currentTime().value) / 10000000
         isFromPlayerView = true
 //                    print("After ----------")
 //                    print(event)

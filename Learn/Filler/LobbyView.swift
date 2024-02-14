@@ -17,10 +17,10 @@ struct LobbyView: View {
         
         NavigationStack {
             VStack {
-                Spacer()
-                Spacer()
-                Spacer()
-                Spacer()
+//                Spacer()
+//                Spacer()
+//                Spacer()
+//                Spacer()
                 // -----------------------------
                 // Content name
                 // -----------------------------
@@ -98,7 +98,7 @@ struct LobbyView: View {
                     .buttonStyle(ShortBigButton(background: .gray.opacity(0.15), foreground: .accentColor))
                     
                 }
-                Spacer()
+//                Spacer()
             }
         }
         

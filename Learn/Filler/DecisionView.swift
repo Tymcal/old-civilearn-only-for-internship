@@ -91,8 +91,7 @@ extension DecisionView {
         Task {
             withAnimation { showingNode = false }
             decisionTemp.endTime = dateTimeStamp()
-            player.seek(to: CMTime(value: CMTimeValue(jumpTo), timescale: 1000))
-            print(Int(player.currentTime().value))
+            player.seek(to: CMTime(value: CMTimeValue(jumpTo * 10000000), timescale: 1000000000))
         }
     }
     
