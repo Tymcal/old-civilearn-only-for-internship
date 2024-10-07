@@ -32,7 +32,7 @@ struct CurrentView: View {
                 .tag(2)
         }
         .ignoresSafeArea()
-        .tabViewStyle(.page)
+        .tabViewStyle(.tabBarOnly)
     }
 }
 
@@ -188,13 +188,23 @@ struct Schedule : View {
                                                     Text(("\(event.title)"))
                                                         .font(.title2)
                                                         .fontWeight(.semibold)
-                                                        .foregroundStyle(.white)
+                                                        .foregroundStyle(
+                                                            daysOfWeek[day].dom == todayDay
+                                                                ?
+                                                                .black.opacity(0.9)
+                                                            :
+                                                                    .white)
                                                         .frame(width: widthCell*(
                                                             event.learnTime.end
                                                             -
                                                             event.learnTime.start
                                                         )*2, height: heightCell)
-                                                        .background(Color.gray.opacity(0.2), in: RoundedRectangle(cornerRadius: 5.0))
+                                                        .background(
+                                                            daysOfWeek[day].dom == todayDay
+                                                            ?
+                                                            Color.white.opacity(0.9)
+                                                            :
+                                                            Color.gray.opacity(0.2), in: RoundedRectangle(cornerRadius: 5.0))
                                                 }
                                             }
                                         }
