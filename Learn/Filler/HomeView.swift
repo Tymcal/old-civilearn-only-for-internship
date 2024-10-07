@@ -105,144 +105,144 @@ struct HomeView: View {
             .padding(.horizontal)
             .navigationTitle("Home")
             .toolbar {
-                Button {
-                    Task {
-                        try await addContent(Content(title: "คำอุปสรรค", asset: "https://tymcal.com/civilearn/src/assets/usecase.mp4",
-                                                     nodes: [
-                                                        Node(name: "Q1", timestamp: 1611, branchs: [
-                                                            Branch(name: "e-10", jumpTo: 1611),
-                                                            Branch(name: "e-9", jumpTo: 1786),
-                                                            Branch(name: "e-8", jumpTo: 1611),
-                                                            Branch(name: "e-7", jumpTo: 1611),
-                                                            Branch(name: "e+7", jumpTo: 1611),
-                                                            Branch(name: "e+8", jumpTo: 1611),
-                                                            Branch(name: "e+9", jumpTo: 1611),
-                                                            Branch(name: "e+10", jumpTo: 1611),
-                                                        ]),
-                                                        Node(name: "Q2", timestamp: 2640, branchs: [
-                                                            Branch(name: "e-5", jumpTo: 2640),
-                                                            Branch(name: "e-4", jumpTo: 2640),
-                                                            Branch(name: "e-3", jumpTo: 3200),
-                                                            Branch(name: "e-2", jumpTo: 2640),
-                                                            Branch(name: "e-1", jumpTo: 2640),
-                                                            Branch(name: "e+0", jumpTo: 2640),
-                                                            Branch(name: "e+1", jumpTo: 2640),
-                                                            Branch(name: "e+2", jumpTo: 2640),
-                                                            Branch(name: "e+3", jumpTo: 2640),
-                                                            Branch(name: "e+4", jumpTo: 2640),
-                                                            Branch(name: "e+5", jumpTo: 2640),
-                                                        ]),
-                                                        Node(name: "Q3", timestamp: 3200, branchs: [
-                                                            Branch(name: "e-5", jumpTo: 3200),
-                                                            Branch(name: "e-4", jumpTo: 3200),
-                                                            Branch(name: "e-3", jumpTo: 3200),
-                                                            Branch(name: "e-2", jumpTo: 3526),
-                                                            Branch(name: "e-1", jumpTo: 3200),
-                                                            Branch(name: "e+0", jumpTo: 3200),
-                                                            Branch(name: "e+1", jumpTo: 3200),
-                                                            Branch(name: "e+2", jumpTo: 3200),
-                                                            Branch(name: "e+3", jumpTo: 3200),
-                                                            Branch(name: "e+4", jumpTo: 3200),
-                                                            Branch(name: "e+5", jumpTo: 3200),
-                                                        ]),
-                                                        Node(name: "Q4", timestamp: 3526, branchs: [
-                                                            Branch(name: "e-5", jumpTo: 3526),
-                                                            Branch(name: "e-4", jumpTo: 3526),
-                                                            Branch(name: "e-3", jumpTo: 3526),
-                                                            Branch(name: "e-2", jumpTo: 3526),
-                                                            Branch(name: "e-1", jumpTo: 3526),
-                                                            Branch(name: "e+0", jumpTo: 3526),
-                                                            Branch(name: "e+1", jumpTo: 3845),
-                                                            Branch(name: "e+2", jumpTo: 3526),
-                                                            Branch(name: "e+3", jumpTo: 3526),
-                                                            Branch(name: "e+4", jumpTo: 3526),
-                                                            Branch(name: "e+5", jumpTo: 3526),
-                                                        ]),
-                                                        Node(name: "Q5", timestamp: 3845, branchs: [
-                                                            Branch(name: "e-5", jumpTo: 3845),
-                                                            Branch(name: "e-4", jumpTo: 3845),
-                                                            Branch(name: "e-3", jumpTo: 3845),
-                                                            Branch(name: "e-2", jumpTo: 3845),
-                                                            Branch(name: "e-1", jumpTo: 3845),
-                                                            Branch(name: "e+0", jumpTo: 3845),
-                                                            Branch(name: "e+1", jumpTo: 3845),
-                                                            Branch(name: "e+2", jumpTo: 3845),
-                                                            Branch(name: "e+3", jumpTo: 4702),
-                                                            Branch(name: "e+4", jumpTo: 3845),
-                                                            Branch(name: "e+5", jumpTo: 3845),
-                                                        ]),
-                                                        Node(name: "Q6", timestamp: 4702, branchs: [
-                                                            Branch(name: "e-9", jumpTo: 4702),
-                                                            Branch(name: "e-8", jumpTo: 4702),
-                                                            Branch(name: "e-7", jumpTo: 4702),
-                                                            Branch(name: "e-6", jumpTo: 4920),
-                                                            Branch(name: "e-5", jumpTo: 4702),
-                                                            Branch(name: "e+5", jumpTo: 4702),
-                                                            Branch(name: "e+6", jumpTo: 4702),
-                                                            Branch(name: "e+7", jumpTo: 4702),
-                                                            Branch(name: "e+8", jumpTo: 4702),
-                                                            Branch(name: "e+9", jumpTo: 4702),
-                                                        ]),
-                                                        Node(name: "Q7", timestamp: 4920, branchs: [
-                                                            Branch(name: "e-9", jumpTo: 4920),
-                                                            Branch(name: "e-8", jumpTo: 4920),
-                                                            Branch(name: "e-7", jumpTo: 5172),
-                                                            Branch(name: "e-6", jumpTo: 4920),
-                                                            Branch(name: "e-5", jumpTo: 4920),
-                                                            Branch(name: "e+5", jumpTo: 4920),
-                                                            Branch(name: "e+6", jumpTo: 4920),
-                                                            Branch(name: "e+7", jumpTo: 4920),
-                                                            Branch(name: "e+8", jumpTo: 4920),
-                                                            Branch(name: "e+9", jumpTo: 4920),
-                                                        ]),
-                                                        Node(name: "Q8", timestamp: 5172, branchs: [
-                                                            Branch(name: "e-19", jumpTo: 5490),
-                                                            Branch(name: "e-18", jumpTo: 5172),
-                                                            Branch(name: "e-17", jumpTo: 5172),
-                                                            Branch(name: "e-16", jumpTo: 5172),
-                                                            Branch(name: "e-15", jumpTo: 5172),
-                                                            Branch(name: "e+15", jumpTo: 5172),
-                                                            Branch(name: "e+16", jumpTo: 5172),
-                                                            Branch(name: "e+17", jumpTo: 5172),
-                                                            Branch(name: "e+18", jumpTo: 5172),
-                                                            Branch(name: "e+19", jumpTo: 5172),
-                                                        ]),
-                                                        Node(name: "Q9", timestamp: 5490, branchs: [
-                                                            Branch(name: "e-9", jumpTo: 5740),
-                                                            Branch(name: "e-8", jumpTo: 5490),
-                                                            Branch(name: "e-7", jumpTo: 5490),
-                                                            Branch(name: "e-6", jumpTo: 5490),
-                                                            Branch(name: "e-5", jumpTo: 5490),
-                                                            Branch(name: "e+5", jumpTo: 5490),
-                                                            Branch(name: "e+6", jumpTo: 5490),
-                                                            Branch(name: "e+7", jumpTo: 5490),
-                                                            Branch(name: "e+8", jumpTo: 5490),
-                                                            Branch(name: "e+9", jumpTo: 5490),
-                                                        ]),
-                                                        Node(name: "Q10", timestamp: 5740, branchs: [
-                                                            Branch(name: "1", jumpTo: 5740),
-                                                            Branch(name: "2", jumpTo: 5740),
-                                                            Branch(name: "3", jumpTo: 5740),
-                                                            Branch(name: "4", jumpTo: 5900),
-                                                        ])
-                                                     ]
-                                                     ,creator: Creator(firstname: "Teema", lastname: "Khawjit", email: "teema.khawjit@gmail.com")))
-                    }
-                } label: {
-                    Image(systemName: "plus")
-                }
-                Button {
-                    Task {
-                        try await addEvent(Event(title: "คำอุปสรรค", decisions: [], isPlaying: false, contPlaying: 0))
-                    }
-                } label: {
-                    Image(systemName: "plus.app")
-                }
-                Button("addEvent") {
-                    Task {
-                        try await addEvent(Event(title: "Calculus", decisions: [], isPlaying: false, contPlaying: 0))
-                    }
-                }
+//                Button {
+//                    Task {
+//                        try await addContent(Content(title: "คำอุปสรรค", asset: "https://tymcal.com/civilearn/src/assets/usecase.mp4",
+//                                                     nodes: [
+//                                                        Node(name: "Q1", timestamp: 1611, branchs: [
+//                                                            Branch(name: "e-10", jumpTo: 1611),
+//                                                            Branch(name: "e-9", jumpTo: 1786),
+//                                                            Branch(name: "e-8", jumpTo: 1611),
+//                                                            Branch(name: "e-7", jumpTo: 1611),
+//                                                            Branch(name: "e+7", jumpTo: 1611),
+//                                                            Branch(name: "e+8", jumpTo: 1611),
+//                                                            Branch(name: "e+9", jumpTo: 1611),
+//                                                            Branch(name: "e+10", jumpTo: 1611),
+//                                                        ]),
+//                                                        Node(name: "Q2", timestamp: 2640, branchs: [
+//                                                            Branch(name: "e-5", jumpTo: 2640),
+//                                                            Branch(name: "e-4", jumpTo: 2640),
+//                                                            Branch(name: "e-3", jumpTo: 3200),
+//                                                            Branch(name: "e-2", jumpTo: 2640),
+//                                                            Branch(name: "e-1", jumpTo: 2640),
+//                                                            Branch(name: "e+0", jumpTo: 2640),
+//                                                            Branch(name: "e+1", jumpTo: 2640),
+//                                                            Branch(name: "e+2", jumpTo: 2640),
+//                                                            Branch(name: "e+3", jumpTo: 2640),
+//                                                            Branch(name: "e+4", jumpTo: 2640),
+//                                                            Branch(name: "e+5", jumpTo: 2640),
+//                                                        ]),
+//                                                        Node(name: "Q3", timestamp: 3200, branchs: [
+//                                                            Branch(name: "e-5", jumpTo: 3200),
+//                                                            Branch(name: "e-4", jumpTo: 3200),
+//                                                            Branch(name: "e-3", jumpTo: 3200),
+//                                                            Branch(name: "e-2", jumpTo: 3526),
+//                                                            Branch(name: "e-1", jumpTo: 3200),
+//                                                            Branch(name: "e+0", jumpTo: 3200),
+//                                                            Branch(name: "e+1", jumpTo: 3200),
+//                                                            Branch(name: "e+2", jumpTo: 3200),
+//                                                            Branch(name: "e+3", jumpTo: 3200),
+//                                                            Branch(name: "e+4", jumpTo: 3200),
+//                                                            Branch(name: "e+5", jumpTo: 3200),
+//                                                        ]),
+//                                                        Node(name: "Q4", timestamp: 3526, branchs: [
+//                                                            Branch(name: "e-5", jumpTo: 3526),
+//                                                            Branch(name: "e-4", jumpTo: 3526),
+//                                                            Branch(name: "e-3", jumpTo: 3526),
+//                                                            Branch(name: "e-2", jumpTo: 3526),
+//                                                            Branch(name: "e-1", jumpTo: 3526),
+//                                                            Branch(name: "e+0", jumpTo: 3526),
+//                                                            Branch(name: "e+1", jumpTo: 3845),
+//                                                            Branch(name: "e+2", jumpTo: 3526),
+//                                                            Branch(name: "e+3", jumpTo: 3526),
+//                                                            Branch(name: "e+4", jumpTo: 3526),
+//                                                            Branch(name: "e+5", jumpTo: 3526),
+//                                                        ]),
+//                                                        Node(name: "Q5", timestamp: 3845, branchs: [
+//                                                            Branch(name: "e-5", jumpTo: 3845),
+//                                                            Branch(name: "e-4", jumpTo: 3845),
+//                                                            Branch(name: "e-3", jumpTo: 3845),
+//                                                            Branch(name: "e-2", jumpTo: 3845),
+//                                                            Branch(name: "e-1", jumpTo: 3845),
+//                                                            Branch(name: "e+0", jumpTo: 3845),
+//                                                            Branch(name: "e+1", jumpTo: 3845),
+//                                                            Branch(name: "e+2", jumpTo: 3845),
+//                                                            Branch(name: "e+3", jumpTo: 4702),
+//                                                            Branch(name: "e+4", jumpTo: 3845),
+//                                                            Branch(name: "e+5", jumpTo: 3845),
+//                                                        ]),
+//                                                        Node(name: "Q6", timestamp: 4702, branchs: [
+//                                                            Branch(name: "e-9", jumpTo: 4702),
+//                                                            Branch(name: "e-8", jumpTo: 4702),
+//                                                            Branch(name: "e-7", jumpTo: 4702),
+//                                                            Branch(name: "e-6", jumpTo: 4920),
+//                                                            Branch(name: "e-5", jumpTo: 4702),
+//                                                            Branch(name: "e+5", jumpTo: 4702),
+//                                                            Branch(name: "e+6", jumpTo: 4702),
+//                                                            Branch(name: "e+7", jumpTo: 4702),
+//                                                            Branch(name: "e+8", jumpTo: 4702),
+//                                                            Branch(name: "e+9", jumpTo: 4702),
+//                                                        ]),
+//                                                        Node(name: "Q7", timestamp: 4920, branchs: [
+//                                                            Branch(name: "e-9", jumpTo: 4920),
+//                                                            Branch(name: "e-8", jumpTo: 4920),
+//                                                            Branch(name: "e-7", jumpTo: 5172),
+//                                                            Branch(name: "e-6", jumpTo: 4920),
+//                                                            Branch(name: "e-5", jumpTo: 4920),
+//                                                            Branch(name: "e+5", jumpTo: 4920),
+//                                                            Branch(name: "e+6", jumpTo: 4920),
+//                                                            Branch(name: "e+7", jumpTo: 4920),
+//                                                            Branch(name: "e+8", jumpTo: 4920),
+//                                                            Branch(name: "e+9", jumpTo: 4920),
+//                                                        ]),
+//                                                        Node(name: "Q8", timestamp: 5172, branchs: [
+//                                                            Branch(name: "e-19", jumpTo: 5490),
+//                                                            Branch(name: "e-18", jumpTo: 5172),
+//                                                            Branch(name: "e-17", jumpTo: 5172),
+//                                                            Branch(name: "e-16", jumpTo: 5172),
+//                                                            Branch(name: "e-15", jumpTo: 5172),
+//                                                            Branch(name: "e+15", jumpTo: 5172),
+//                                                            Branch(name: "e+16", jumpTo: 5172),
+//                                                            Branch(name: "e+17", jumpTo: 5172),
+//                                                            Branch(name: "e+18", jumpTo: 5172),
+//                                                            Branch(name: "e+19", jumpTo: 5172),
+//                                                        ]),
+//                                                        Node(name: "Q9", timestamp: 5490, branchs: [
+//                                                            Branch(name: "e-9", jumpTo: 5740),
+//                                                            Branch(name: "e-8", jumpTo: 5490),
+//                                                            Branch(name: "e-7", jumpTo: 5490),
+//                                                            Branch(name: "e-6", jumpTo: 5490),
+//                                                            Branch(name: "e-5", jumpTo: 5490),
+//                                                            Branch(name: "e+5", jumpTo: 5490),
+//                                                            Branch(name: "e+6", jumpTo: 5490),
+//                                                            Branch(name: "e+7", jumpTo: 5490),
+//                                                            Branch(name: "e+8", jumpTo: 5490),
+//                                                            Branch(name: "e+9", jumpTo: 5490),
+//                                                        ]),
+//                                                        Node(name: "Q10", timestamp: 5740, branchs: [
+//                                                            Branch(name: "1", jumpTo: 5740),
+//                                                            Branch(name: "2", jumpTo: 5740),
+//                                                            Branch(name: "3", jumpTo: 5740),
+//                                                            Branch(name: "4", jumpTo: 5900),
+//                                                        ])
+//                                                     ]
+//                                                     ,creator: Creator(firstname: "Teema", lastname: "Khawjit", email: "teema.khawjit@gmail.com")))
+//                    }
+//                } label: {
+//                    Image(systemName: "plus")
+//                }
+//                Button {
+//                    Task {
+//                        try await addEvent(Event(title: "คำอุปสรรค", decisions: [], isPlaying: false, contPlaying: 0))
+//                    }
+//                } label: {
+//                    Image(systemName: "plus.app")
+//                }
+//                Button("addEvent") {
+//                    Task {
+//                        try await addEvent(Event(title: "Calculus", decisions: [], isPlaying: false, contPlaying: 0))
+//                    }
+//                }
                 ProfileButton(showSignUp: $showSignUp, isLoggedIn: $isLoggedIn, token: $token)
             }
         }

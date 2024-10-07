@@ -7,6 +7,13 @@
 
 import Foundation
 
+struct Group: Codable, Identifiable {
+    var id: String? = UUID().uuidString
+    var title: String
+    var sub: [Group]?
+    var qs: [Content]?
+}
+
 struct Content: Codable, Identifiable {
     var id: String? = UUID().uuidString
     var title: String

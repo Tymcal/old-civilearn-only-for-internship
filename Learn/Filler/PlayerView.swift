@@ -133,7 +133,7 @@ struct PlayerView: View {
                     .cornerRadius(10)
                     .transition(.asymmetric(insertion: .move(edge: .bottom), removal: .opacity))
             }
-            .presentationBackground(.black.opacity(0.25))
+            .presentationBackground(LinearGradient(gradient: Gradient(colors: [.clear, .black]), startPoint: .top, endPoint: .bottom).opacity(0.50))
         }
         .statusBar(hidden: false)
         .onAppear {
