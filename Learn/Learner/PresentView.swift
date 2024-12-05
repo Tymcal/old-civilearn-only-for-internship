@@ -191,6 +191,7 @@ struct Schedule : View {
                                                         .foregroundStyle(
                                                             daysOfWeek[day].dom == todayDay
                                                                 ?
+                                                            
                                                                 .black.opacity(0.9)
                                                             :
                                                                     .white)
