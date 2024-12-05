@@ -86,3 +86,15 @@ struct CorrectCount: Hashable, Codable, Identifiable {
     var count: Int
     var id: String { question }
 }
+
+struct Course: Hashable, Codable, Identifiable {
+    var title: String
+    var units: [Unit]
+    var id: String { title }
+}
+
+struct Unit: Hashable, Codable, Identifiable {
+    var title: String
+    var subcontent: [String]
+    var id: String { title }
+}
